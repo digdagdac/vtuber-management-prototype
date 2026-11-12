@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-12T12:06:48.617Z",
+  "browser": "157.0.4341.46",
+  "passed": 12,
+  "checks": [
+    "3개 주제의 제작 장면·중간 선택·애드리브·종료 채팅·원인 기록이 실제 UI에서 연결됨",
+    "PC 1280×720·1366×768·1920×1080에서 제작 선택과 버튼이 잘리지 않음",
+    "중간 점검에서 재접속해도 기여가 유지되고 애드리브가 방송 타이머를 초기화하지 않음",
+    "방송 중 재접속 후 사용한 애드리브가 복구되지 않고 기존 고정 방송이 이어짐",
+    "지난 클립 편집 선택이 이번 제작과 실제 후속 보상에 반영됨",
+    "첫 3편을 연속 제작하며 연출·기본 위임·컨디션 방침과 방송 실적이 누적됨",
+    "준비 맡기기와 고용 스태프의 자동 방송이 한 번만 결산됨",
+    "기존 v4 생방송 저장을 제작 필드 없이 불러와 정상 결산함",
+    "적자 상태의 중간 저장을 복구해 무료 방침·맡기기로 결산과 다음 분기까지 진행하고 유료 선택은 잔액 4만원부터 허용함",
+    "실제 타이머에서도 자동 기여→중간 정지→선택→생방송이 이어짐",
+    "기존 흐름 비교판은 제작을 생략하고 독립 저장을 사용해 본편 기록을 보존함",
+    "브라우저 페이지·콘솔 오류 없음"
+  ],
+  "screenshots": [
+    "output\\playwright\\v8\\midpoint-game.png",
+    "output\\playwright\\v8\\onair-game.png",
+    "output\\playwright\\v8\\completed-broadcast.png",
+    "output\\playwright\\v8\\midpoint-song.png",
+    "output\\playwright\\v8\\onair-song.png",
+    "output\\playwright\\v8\\midpoint-talk.png",
+    "output\\playwright\\v8\\onair-talk.png",
+    "output\\playwright\\v8\\editing-or-next.png"
+  ],
+  "errors": []
+}

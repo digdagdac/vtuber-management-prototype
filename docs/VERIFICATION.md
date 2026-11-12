@@ -39,3 +39,13 @@ Playwright를 다른 위치에 설치했다면 VT_PLAYWRIGHT 환경변수로 모
 상태 전이·보상·진행·저장과 해당 화면 시나리오가 동작하는지 확인했습니다. 외부 사용자 대상 재미 검증, 실제 모바일 기기 검증, 장기 밸런스 선호나 시장성은 별도 과제입니다.
 
 README의 화면은 2026-10-25 보존 캡처이며 신규 사용자 테스트 결과가 아닙니다.
+
+## 이번 공개 사본에서 다시 실행한 기록
+
+아래 JSON에는 실행 시각과 통과한 검사 항목을 보존했습니다.
+
+- [핵심 규칙 45개](evidence/core-results.json)
+- [후속 반응 10개](evidence/career-results.json)
+- [제작·평가 8개](evidence/production-results.json)
+- [방송 제작 10개](evidence/workshop-results.json)
+- [브라우저 12개](evidence/workshop-browser-results.json)
