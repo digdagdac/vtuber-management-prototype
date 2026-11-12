@@ -1,0 +1,9 @@
+node_modules/
+prototype/qa/*
+!prototype/qa/.gitkeep
+prototype/output/
+*.log
+.env
+.env.*
+.DS_Store
+Thumbs.db

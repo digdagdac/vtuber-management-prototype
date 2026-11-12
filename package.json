@@ -1,0 +1,17 @@
+{
+  "name": "vtuber-management-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-assisted VTuber management game prototype and design evaluation",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node prototype/tests/verify-core.cjs && node prototype/tests/verify-career.cjs && node prototype/tests/verify-production.cjs && node prototype/tests/verify-workshop.cjs",
+    "test:browser": "node prototype/tests/verify-workshop-browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
