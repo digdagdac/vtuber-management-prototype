@@ -175,3 +175,11 @@ body{word-break:keep-all;overflow-wrap:break-word}
 .target-field .aim-target:hover:not(:disabled){transform:translate(-50%,-50%) scale(1.03)}
 @media(max-height:760px) and (min-width:1000px){.win.plan{bottom:auto}.raid-boss{height:86px;width:125px}.raid-boss img{width:170px;height:160px}}
 @media(max-width:760px){.raid-boss{height:64px;width:85px}.raid-boss img{height:116px;width:124px}.aim-target{width:58px;height:66px}.aim-target img{width:44px;height:43px}}
+.first-guide{position:absolute;z-index:2;top:12px;left:16px;right:16px;padding:10px 16px;border-radius:12px;background:#fffdf8f5;border:2px solid #cfc7ad;box-shadow:0 8px 24px #0003}
+.first-guide>b{display:block;font-size:13px;margin:0 0 6px}
+.first-guide ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none;counter-reset:step}
+.first-guide li{font-size:12px;line-height:1.45;counter-increment:step}
+.first-guide li::before{content:counter(step);display:inline-grid;place-items:center;width:18px;height:18px;margin-right:6px;border-radius:50%;background:#32614f;color:#fff;font-size:11px;vertical-align:middle}
+.win.result{overflow:hidden}
+.win.result>.win-body{overflow:auto;min-height:0;flex:1}
+.win.result>.primary{flex:none;width:calc(100% - 32px);margin:8px 16px 0}

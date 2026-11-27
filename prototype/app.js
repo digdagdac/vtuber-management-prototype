@@ -229,7 +229,8 @@
   function storyView(key) {
     const c = G.story[key], line = c.scenes[Math.min(storyStep, c.scenes.length - 1)], last = storyStep >= c.scenes.length - 1;
     const art = key === 'ch1' && storyStep >= 3 && storyStep <= 4 ? 'story_notebook' : key === 'ch2' && storyStep <= 1 ? 'story_waitroom' : key === 'ch4' && storyStep >= 2 && storyStep <= 3 ? 'story_backstage' : key === 'ch5' ? 'story_ten' : c.art;
-    return `<div class="vn" data-story="${key}" data-story-line="${storyStep}">${picture(A.events[art] ? art : c.art, 'vn-art')}<div class="vn-box"><span class="label">STORY · ${esc(c.title)}</span><h2 id="phase-title" tabindex="-1" class="sr-only">${esc(c.title)}</h2>${line[0] ? `<b class="vn-name">${esc(line[0])}</b>` : ''}<p class="vn-line${line[0] ? '' : ' narration'}">${esc(line[1])}</p><div class="vn-foot"><span>${storyStep + 1}/${c.scenes.length}</span><button id="story-skip" class="quiet">건너뛰기</button><button id="story-next" class="primary">${last ? '이야기 닫기' : '다음 ▶'}</button></div></div></div>`;
+    const guide = key === 'ch1' && storyStep === 0 ? `<aside class="first-guide" aria-label="플레이 방법"><b>세 편만 해 보면 됩니다</b><ol><li>올해 목표를 고릅니다.</li><li>주제와 일정을 정하고 계획을 확정합니다.</li><li>제작 중 방향을 고르거나 맡기고, 생방송은 직접 하거나 건너뜁니다.</li><li>결과에서 다음 분기로 갑니다.</li></ol></aside>` : '';
+    return `<div class="vn" data-story="${key}" data-story-line="${storyStep}">${guide}${picture(A.events[art] ? art : c.art, 'vn-art')}<div class="vn-box"><span class="label">STORY · ${esc(c.title)}</span><h2 id="phase-title" tabindex="-1" class="sr-only">${esc(c.title)}</h2>${line[0] ? `<b class="vn-name">${esc(line[0])}</b>` : ''}<p class="vn-line${line[0] ? '' : ' narration'}">${esc(line[1])}</p><div class="vn-foot"><span>${storyStep + 1}/${c.scenes.length}</span><button id="story-skip" class="quiet">건너뛰기</button><button id="story-next" class="primary">${last ? '이야기 닫기' : '다음 ▶'}</button></div></div></div>`;
   }
   function eventView(s) {
     const e = s.pending.event;
@@ -296,7 +297,7 @@
       ${reviewBoard(r)}${qualityAxes(r)}${rankLine(r)}<div class="result-grid">${cards}</div>
       ${r.notes.length ? `<ul class="result-notes">${r.notes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
       <details><summary>자세히</summary><p class="subtle">${esc(r.event)} → ${esc(r.choice)}<br>방송 매출 ${fmt(r.income)}만원 · 운영/훈련 지출 ${fmt(r.cost)}만원 · 성공 확률 ${why} · 클립 ${r.viral ? '발생' : '없음'}</p></details>
-      ${s.ending ? endingView(s, feedback) : '<button id="advance" class="primary">다음 분기로 →</button>'}</div>`;
+      ${s.ending ? endingView(s, feedback) : ''}</div>${s.ending ? '' : '<button id="advance" class="primary">다음 분기로 →</button>'}`;
   }
   function render(focusId) {
     clearTimeout(productionTimer);
